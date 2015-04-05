@@ -28,6 +28,10 @@ TARGET_BOARD_INFO_FILE := device/motorola/falcon/board-info.txt
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 TARGET_KERNEL_CONFIG := falcon_defconfig
 
+# Tell the compiler we are using a quadcore cpu
+BOARD_GLOBAL_CFLAGS += -mvectorize-with-neon-quad
+BOARD_GLOBAL_CPPFLAGS += -mvectorize-with-neon-quad
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_falcon.c
