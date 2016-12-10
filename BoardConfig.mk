@@ -30,10 +30,6 @@ BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 # Kernel
 TARGET_KERNEL_CONFIG := falcon_defconfig
 
-# Tell the compiler we are using a quadcore cpu
-BOARD_GLOBAL_CFLAGS += -mvectorize-with-neon-quad
-BOARD_GLOBAL_CPPFLAGS += -mvectorize-with-neon-quad
-
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_falcon
 TARGET_RECOVERY_DEVICE_MODULES := libinit_falcon
